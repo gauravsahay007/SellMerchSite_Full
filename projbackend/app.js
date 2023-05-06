@@ -30,10 +30,10 @@ const categoryRoutes=require("./routes/category");
 const userRoutes=require("./routes/user");
 const productRoutes=require("./routes/product");
 // my routes
-app.use("/api", authRoutes);
-app.use("/api",categoryRoutes);
-app.use("/api",userRoutes);
-app.use("/api",productRoutes);
+app.use("/", authRoutes);
+app.use("/",categoryRoutes);
+app.use("/",userRoutes);
+app.use("/",productRoutes);
 mongoose.connect(process.env.DATABASE,{   
 }).then(()=>{   
     console.log("DB Connected")
